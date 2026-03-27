@@ -6,9 +6,9 @@ A fast, browser-based tool to clean messy text with precision. Strip out extra s
 
 - **Remove Extra Spaces** - Collapse repeated spaces and tabs into single spaces
 - **Trim Line Edges** - Remove leading and trailing whitespace from each line
-- **Normalize Blank Lines** - Reduce multiple consecutive blank lines to one
+- **Normalise Blank Lines** - Reduce multiple consecutive blank lines to one
 - **Remove Blank Lines** - Completely eliminate blank lines if needed
-- **Fix Line Breaks** - Normalize mixed line breaks across your text
+- **Fix Line Breaks** - Normalise mixed line breaks across your text
 - **Real-time Stats** - Track characters saved and output size
 - **Privacy-First** - Your content never leaves the page
 - **One-Click Copy** - Export cleaned text instantly
@@ -62,6 +62,4 @@ Works in all modern browsers that support:
 
 Free to use and modify.
 
-## Author
 
-Created by Raj Kumar
