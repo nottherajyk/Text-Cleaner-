@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Cleaner</title>
+  <meta name="description"
+    content="Clean messy text instantly. Remove extra spaces, fix formatting, and prepare pasted content directly in your browser." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-mark">T</span>
+          <span>Text Cleaner</span>
+        </div>
+        <a class="ghost-link" href="#cleaner">Start Cleaning</a>
+      </nav>
+
+        <section class="hero-content">
+          <div class="hero-copy reveal reveal-visible">
+          <p class="eyebrow">Signal restored</p>
+          <h1>Clean noisy text with precision.</h1>
+          <p class="hero-text">
+            Strip out messy spacing, repair formatting, and prepare pasted
+            content for notes, forms, and data work.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="#cleaner">Launch Cleaner</a>
+            <button class="secondary-button" id="loadSampleButton" type="button">
+              Inject Sample Text
+            </button>
+          </div>
+
+          <ul class="hero-points" aria-label="Key benefits">
+            <li>Collapse duplicate spaces and stray tabs</li>
+            <li>Trim uneven line edges in one pass</li>
+            <li>Normalize blank lines before export</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="tool-section" id="cleaner">
+          <div class="section-heading reveal">
+          <h2 class="typing-heading" data-typing-text="PASTE TEXT, CLEAN IT, COPY IT....">PASTE TEXT, CLEAN IT, COPY IT....</h2>
+          <p>
+            Your content never leaves the page. Adjust the cleanup rules, then
+            copy the cleaned output in one click.
+          </p>
+        </div>
+
+        <div class="tool-grid">
+            <aside class="control-panel reveal reveal-left">
+            <h3>Cleanup Options</h3>
+            <label class="option-row">
+              <input type="checkbox" id="trimLines" checked />
+              <span>Trim spaces at the start and end of each line</span>
+            </label>
+            <label class="option-row">
+              <input type="checkbox" id="collapseSpaces" checked />
+              <span>Collapse repeated spaces and tabs into a single space</span>
+            </label>
+            <label class="option-row">
+              <input type="checkbox" id="collapseBlankLines" checked />
+              <span>Reduce multiple blank lines to one blank line</span>
+            </label>
+            <label class="option-row">
+              <input type="checkbox" id="removeBlankLines" />
+              <span>Remove all blank lines completely</span>
+            </label>
+            <label class="option-row">
+              <input type="checkbox" id="normalizeLineBreaks" checked />
+              <span>Normalize mixed line breaks</span>
+            </label>
+
+            <div class="panel-actions">
+              <button class="primary-button" id="cleanButton" type="button">
+                Clean Text
+              </button>
+              <button class="secondary-button" id="copyButton" type="button">
+                Copy Output
+              </button>
+              <button class="secondary-button" id="clearButton" type="button">
+                Clear All
+              </button>
+            </div>
+
+            <div class="stat-grid">
+              <div class="stat-card">
+                <span class="stat-label">Input</span>
+                <strong id="inputCount">0 chars</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Output</span>
+                <strong id="outputCount">0 chars</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Saved</span>
+                <strong id="savedCount">0 chars</strong>
+              </div>
+            </div>
+
+            <p class="privacy-note">
+
+            </p>
+          </aside>
+
+          <div class="editor-panel">
+              <div class="editor-card reveal reveal-right">
+              <div class="editor-head">
+                <label for="inputText">Messy Text</label>
+                <button class="text-button" id="pasteSampleButton" type="button">
+                  Load Sample
+                </button>
+              </div>
+              <textarea id="inputText"
+                placeholder="Paste text with odd spacing, extra blank lines, or inconsistent formatting..."
+                spellcheck="false"></textarea>
+            </div>
+
+              <div class="editor-card reveal reveal-right" data-reveal-delay="120">
+              <div class="editor-head">
+                <label for="outputText">Clean Output</label>
+                <span id="copyStatus" class="copy-status">Ready</span>
+              </div>
+              <textarea id="outputText" placeholder="Your cleaned text will appear here instantly." readonly
+                spellcheck="false"></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
